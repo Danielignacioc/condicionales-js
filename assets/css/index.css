@@ -1,0 +1,18 @@
+img
+{
+    width: 300px;
+    height: 300px;
+}
+
+.contenedorStickers
+{
+    display: flex;
+    padding: 100px;
+    text-align: center;
+}
+
+p
+{
+
+    text-align: center;
+}
