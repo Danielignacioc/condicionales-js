@@ -12,3 +12,9 @@ img {
 p {
   text-align: center;
 }
+
+button {
+    display: flex;
+    margin-left:50%;
+    
+}
