@@ -1,9 +1,8 @@
+
 const spanHtml = document.querySelectorAll("span");
-const sel = document.querySelectorAll("select");
 
 function calcular() {
-
-
+    const sel = document.querySelectorAll("select");
 
     if ((sel[0].value == 9) && (sel[1].value == 1) && (sel[2].value == 1)) {
         return spanHtml[0] = "<p>password 1 correcto</p>";
