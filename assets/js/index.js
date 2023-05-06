@@ -28,8 +28,8 @@ function borde(option=true) {
   const img = document.getElementsByTagName("img");
 
   for (let imagen of img) {
-    let bordeVerde = imagen.style.border = "solid 12px green";
-    let bordeRojo = imagen.style.border = "solid 12px red"
+    let bordeVerde = imagen.style.border = "solid 2px green";
+    let bordeRojo = imagen.style.border = "solid 2px red"
 
     if (option == true) {
       return bordeVerde;
