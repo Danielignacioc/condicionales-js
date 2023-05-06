@@ -1,5 +1,9 @@
 
-
+const img = document.getElementsByTagName("img");
+for (let imagen of img) {
+  let imgHtml = imagen.style.border = "solid, 2px, green";
+  borde(imgHtml);
+}
 
 function comprobar() {
 
@@ -10,8 +14,10 @@ function comprobar() {
   let alucard = valores[0];
   let anderson = valores[1];
   let seras = valores[2];
+  let total =+alucard.value + +anderson.value + +seras.value
 
-  let total =+alucard.value + +anderson.value + +seras.value;
+
+  
   pHtml += `
     <p>llevas ${+alucard.value + +anderson.value + +seras.value} stickers</p>
     `;
@@ -24,6 +30,27 @@ function comprobar() {
     spanHtml.innerHTML = pHtml;
   }
   else {
-    return spanHtml.innerHTML = "INTENTALO DE NUEVO";
+    return spanHtml.innerHTML = "<p>INTENTALO DE NUEVO</p>";
+  }
+}
+
+
+function borde(imagen) {
+
+
+  for (let con=0; con < 4; con++) {
+    if (con % 1) {
+
+      return imagen.style.border = "solid, 2px, red";
+    }
+
+    else if (con % 0) {
+      return imagen.style.border = "solid, 2px, green";
+    }
+    
+    else {
+      return alert("error: intente otra vez");
+    }
+
   }
 }
