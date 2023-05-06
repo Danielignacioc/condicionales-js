@@ -23,23 +23,19 @@ function comprobar() {
   }
 }
 
-function borde() {
-  let con=0;
+function borde(option=true) {
+
   const img = document.getElementsByTagName("img");
 
   for (let imagen of img) {
-    let bordeVerde = imagen.style.border = "solid 2px green";
-    let bordeRojo = imagen.style.border = "solid 2px red"
+    let bordeVerde = imagen.style.border = "solid 12px green";
+    let bordeRojo = imagen.style.border = "solid 12px red"
 
-    if (con % 1) {
+    if (option == true) {
       return bordeVerde;
 
-    } else if (con % 0) {
+    } else if (option == false) {
       return bordeRojo;
-
-    } else {
-      return alert("error: intente otra vez");
     }
   }
-  con++;
 }
