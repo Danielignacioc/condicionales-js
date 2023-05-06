@@ -23,22 +23,24 @@ function comprobar() {
   }
 }
 
-function borde(option=true) {
+function borde(option) {
 
   const img = document.getElementsByTagName("img");
-  let con=0;
-
+  let con = 0;
 
   for (let imagen of img) {
     let bordeVerde = imagen.style.border = "solid 2px green";
-    let bordeRojo = imagen.style.border = "solid 2px red"
+    let sinBorde = imagen.style.border = "none";
 
 
-    if (option == true) {
+    if (!option && (con % 2 == 0)) {
       return bordeVerde;
 
-    } else if (option == false) {
-      return bordeRojo;
     }
+
+    else if (option && (con % 2 == 1)) {
+      return sinBorde;
+    }
+    con++;
   }
 }
