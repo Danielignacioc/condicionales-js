@@ -1,8 +1,4 @@
-const img = document.getElementsByTagName("img");
-for (let imagen of img) {
-  let imgHtml = (imagen.style.border = "solid, 2px, green");
-  borde(imgHtml);
-}
+
 
 function comprobar() {
   const valores = document.getElementsByTagName("input");
@@ -27,14 +23,23 @@ function comprobar() {
   }
 }
 
-function borde(imagen) {
-  for (let con = 0; con < 4; con++) {
+function borde() {
+  let con=0;
+  const img = document.getElementsByTagName("img");
+
+  for (let imagen of img) {
+    let bordeVerde = imagen.style.border = "solid 2px green";
+    let bordeRojo = imagen.style.border = "solid 2px red"
+
     if (con % 1) {
-      return (imagen.style.border = "solid, 2px, red");
+      return bordeVerde;
+
     } else if (con % 0) {
-      return (imagen.style.border = "solid, 2px, green");
+      return bordeRojo;
+
     } else {
       return alert("error: intente otra vez");
     }
   }
+  con++;
 }
