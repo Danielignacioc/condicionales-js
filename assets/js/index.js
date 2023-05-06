@@ -1,17 +1,29 @@
-let alucardVal = document.querySelector("#alucard-imp").value;
-let andersonVal = document.querySelector("#anderson-imp").value;
-let serasVal = document.querySelector("#seras-imp").value;
-const btn = document.querySelector("#evr").value;
 
-const cStickers = document.querySelector("#cantidad-stickers");
 
-btn.addEventListener("click", () => {
-  let total = +alucardVal + +andersonVal + +serasVal;
-  if ((total) => 10) {
-    return cStickers.innerHTML("Llevas muchos stickers");
-  } else if (total < 10 && total > 0) {
-    return cStickers.innerHTML("Llevas " + total + " stickers");
-  } else {
-    return cStickers.innerHTML("intentalo de nuevo");
+
+function comprobar() {
+
+  const valores = document.getElementsByTagName("input");
+  let spanHtml = document.getElementsByTagName("span")[0];
+
+  let pHtml = "";
+  let alucard = valores[0];
+  let anderson = valores[1];
+  let seras = valores[2];
+
+  let total =+alucard.value + +anderson.value + +seras.value;
+  pHtml += `
+    <p>llevas ${+alucard.value + +anderson.value + +seras.value} stickers</p>
+    `;
+
+
+  if (total >= 10) {
+    spanHtml.innerHTML = "<p>Llevas muchos stickers</p>";
   }
-});
+  else if (total < 10 && total > 0) {
+    spanHtml.innerHTML = pHtml;
+  }
+  else {
+    return spanHtml.innerHTML = "INTENTALO DE NUEVO";
+  }
+}
