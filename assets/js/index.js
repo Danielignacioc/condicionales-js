@@ -21,19 +21,14 @@ function comprobar() {
   }
 }
 
-function borde(option) {
-  const img = document.getElementsByTagName("img");
-  let con = 0;
+function borde(sId, option = false) {
+  const eltoId = document.getElementById(sId);
 
-  for (let imagen of img) {
-    let bordeVerde = (imagen.style.border = "solid 2px green");
-    let sinBorde = (imagen.style.border = "none");
-
-    if (!option && con % 2 == 0) {
-      return bordeVerde;
-    } else if (option && con % 2 == 1) {
-      return sinBorde;
-    }
-    con++;
+  if (!option) {
+    const borde = (eltoId.style.border = "none");
+    return borde;
+  } else {
+    const borde = (eltoId.style.border = "solid 2px green");
+    return borde;
   }
 }
