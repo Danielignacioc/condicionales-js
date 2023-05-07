@@ -23,12 +23,39 @@ function comprobar() {
 
 function borde(sId, option = false) {
   const eltoId = document.getElementById(sId);
+  let con = 0;
+  let borde;
 
-  if (!option) {
-    const borde = (eltoId.style.border = "none");
-    return borde;
-  } else {
-    const borde = (eltoId.style.border = "solid 2px green");
-    return borde;
+  con += 1;
+  while (option)  {
+    if ((con % 2) == 1) {
+      borde = eltoId.style.border = "solid 2px green";
+      return borde;
+
+    } else  if ((con % 2) == 0) {
+      borde = eltoId.style.border = "solid 0 white";
+      return borde;
+    }
+    con++;
+    option = false;
   }
 }
+
+function seleccionar(sId) {
+const eId = document.getElementById(sId);
+
+
+  document.addEventListener("keydown", function (event) {
+    for (let i; event.key.length - 1 > i; i++ ) {
+      console.log("con");
+    if ((i / 2 ) % 2 == 0) {
+      const color = (eId.style.border = "solid 2px green");
+      return color;
+    } else if  ((i / 2 ) % 2 == 1)  {
+      const color = (eId.style.border = "solid 0");
+      return color;
+    }
+  }
+  });
+}
+

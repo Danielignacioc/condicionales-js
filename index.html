@@ -9,14 +9,15 @@
     <title>Hellsing stickers</title>
   </head>
   <body>
-    <div class="descripcion">
+    <div>
       <p>Puedes llevar hasta 10 stickers en total</p>
     </div>
 
-    <div id="alid" class="contenedorStickers">
+    <div  class="contenedorStickers">
       <div class="alucard">
         <img
-          onclick="borde(true, 'alid')"
+        id="alid"
+          onclick="borde('alid', true)"
           src="./assets/img/alucard.jpg"
           alt="Alucard"
         />
@@ -25,7 +26,7 @@
 
       <div id="anid" class="anderson">
         <img
-          onclick="borde(true, 'anid')"
+          onclick="borde('anid', true)"
           src="./assets/img/anderson.jpg"
           alt="Anderson"
         />
@@ -34,7 +35,7 @@
 
       <div id="serid" class="serasVictoria">
         <img
-          onclick="borde(true, sId)"
+          onclick="borde('serid', true)"
           src="./assets/img/serasvictoria.jpg"
           alt="Seras Victoria"
         />
